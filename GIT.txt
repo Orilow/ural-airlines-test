@@ -1,0 +1,11 @@
+git checkout -b feature_1  # создаем и переходим на ветку feature_1
+# представим, что у нас есть какие-то изменения, тогда
+git add -A # добавляем что есть
+git commit -m "First empty commit"  # первый коммит
+# делаем что-то еще
+git add -A
+git commit -m "Second Commit"
+git reset --hard HEAD~1 #Удалит второй коммит полностью и вернет нас на первый
+git checkout master #вернемся на главную ветку master
+git merge feature_1 
+# потом можем залить на сервер git push
